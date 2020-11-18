@@ -35,7 +35,7 @@ jobs:
       - run:
           name: Install SwiftLint
           command: brew install swiftlint
-
+      - run: carthage update --platform iOS --no-use-binaries
       - run:
           name: Build and run tests
           command: bundle exec fastlane test
